@@ -21,6 +21,7 @@ header {
 
 header .banner {
   float: left;
+  width: 570px;
 }
 
 a {
@@ -45,36 +46,72 @@ header nav {
 
 main {
 	background: white;
-	overflow: auto;
-	border-radius: 0 5px 5px 5px;;
-  padding: 5px 40px 40px 40px;
+  display: block;
+  /*overflow: auto;
+  border-radius: 0 5px 5px 5px;;
+  padding: 5px 40px 40px 40px;*/
 }
 
-.tabs {
-  padding-bottom: 10px;
+/*I want to centralize the tabs without hardcoding it
+main .container .tabs .myMenu {
+  margin: auto;
+  background: whitesmoke;
+  padding-left: 230px;
+}*/
+
+.myMenu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
 }
 
-.tabs a span {
-    border-radius: 5px 5px 0 0;
-    display: inline-block;
-    width: 150px;
-    margin-right: 10px;
-    text-align: center;
-    background: rgb(59, 48, 116);
-    padding: 5px;
-    color: #fff;
+.myMenu li a:link, .myMenu li a:visited {
+  border-radius: 5px 5px 0 0;
+  list-style: none;
+  background-color: rgb(59, 48, 116);
+  padding: 5px;
+  width: 150px;
+  display: block;
+  text-align: center;
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
 }
 
-.tabs a .active {
-    background: #ddd;
-    color: rgb(59, 48, 116);
+.myMenu li a:hover {
+  background-color: red;
 }
 
-main .content {
-  background: #ddd; 
+.myMenu li ul {
+  position: absolute;
+  visibility: hidden;
+  border-top: 1px solid #fff;
+  margin: 0;
+  padding: 0;
 }
 
-main .left {
+.myMenu li ul li {
+  display: inline;
+  float: none;
+  width: auto;
+}
+
+.myMenu li ul li a:link, .myMenu li ul li a:visited {
+  /*background-color: rgb(59, 48, 116);*/
+  padding: 5px;
+  width: auto;
+}
+
+main .container {
+ /* background: #ddd;
+  min-width: 855px;
+  max-width: 855px;
+  margin: 4px auto;
+  position: absolute;*/
+}
+
+/*main .left {
 	float: left;
 	width: 570px;
 }
@@ -82,6 +119,26 @@ main .left {
 main .right {
 	float: right;
 	width: 285px;
+}*/
+
+main .mainpage {
+  width: 855px;
+  overflow: auto;
+  padding-top: 5px;
+}
+
+main .container .mainpage .mainleft {
+  width: 150px;
+  float: left;
+  /*border: 4px solid darksalmon;*/
+  /*margin-left: 10px;*/
+}
+
+main .container .mainpage .mainright {
+  width: 655px;
+  float: right;
+  /*border: 4px solid black;*/
+  /*margin-right: 90px;*/
 }
 
 footer {
@@ -125,3 +182,5 @@ footer .sitemap .left {
 footer .sitemap .right {
     float: right;
 }
+
+

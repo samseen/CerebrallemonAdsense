@@ -1,9 +1,13 @@
-var main = function () {
-	"use strict";
+$(document).ready(function() {
+	$('.myMenu > li').bind('mouseover', openSubMenu);
+	$('.myMenu > li').bind('mouseout', closeSubMenu);
 
-	$(".tabs span").on("click", function (event) {
-		console.log("Tab Clicked!");
-	});
-};
+	function openSubMenu() {
+		$(this).find('ul').css('visibility', 'visible');
+	};
 
-$(document).ready(main);
+	function closeSubMenu() {
+		$(this).find('ul').css('visibility', 'hidden');
+	};
+});
+
